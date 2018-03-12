@@ -15,9 +15,17 @@ public class SpringMicroservicesConfigClientApplication {
 	@Value("${message}")
 	private String message;
 	
+	@Value ("${cipherMessage}")
+	private String cipherMessage;
+	
 	@RequestMapping (value="/message")
 	public String message () {
 		return message;
+	}
+	
+	@RequestMapping ("/cipherMessage")
+	public String cipherMessage () {
+		return cipherMessage;
 	}
 	
 	public static void main(String[] args) {
